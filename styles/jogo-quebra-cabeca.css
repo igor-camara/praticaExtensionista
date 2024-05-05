@@ -195,10 +195,6 @@ body {
     position: relative;
 }
 
-img:hover {
-    background-color: #fa021b;
-}
-
 .correct {
     animation: flashGreen 1.5s linear forwards
 }

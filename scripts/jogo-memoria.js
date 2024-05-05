@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         var cardImg = document.getElementById("card-" + id);
         if (cardImg) {
-            cardImg.src = "../assets/images/jogo-memoria/" + image;
+            cardImg.src = "../assets/images/jogo-memoria-images/" + image;
         }
     }
 

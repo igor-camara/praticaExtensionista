@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Quebra-Cabeça</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/jogo-quebra-cabeca.css'>
+    <script src='../scripts/jogo-quebra-cabeca.js'></script>
+</head>
+<body>
+    <div class="menu-button" onclick="window.location.href='menu.html'">Voltar ao menu</div>
+    <h1 class="page-title">Quebra-Cabeça</h1>
+    <div class="blur-effect"></div>
+    <div class="finished">
+        <div class="back-to-menu" onclick="window.location.href='menu.html'">
+            Voltar ao Menu
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="board-container">
+            <div id="verify">
+                Verificar resposta
+            </div>
+            <div class="board">
+                <div id="position-0_0" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-0_1" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-0_2" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-0_3" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-1_0" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-1_1" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-1_2" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-1_3" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-2_0" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-2_1" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-2_2" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div id="position-2_3" class="grid-position" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+        <div class="figures"></div>
+    </div>
+</body>
+</html>

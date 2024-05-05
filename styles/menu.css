@@ -1,0 +1,58 @@
+/* IMPORTS */
+@font-face {
+    font-family: "Lobster";
+    src: url("../assets/fonts/Lobster-Regular.woff") format("woff"),
+    url("../assets/fonts/Lobster-Regular.woff2") format(("woff2"));
+}
+
+/* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: "Lobster";
+    color: #FFFFFF;
+    background: radial-gradient(#82ed8d, #000000);
+}
+
+.container {
+    position: absolute;
+    display: grid;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-radius: 20px;
+    border: solid;
+    border-color: #a3cfa8;
+    border-width: 3px;
+    text-align: center;
+    align-items: center;
+    background: url("../assets/images/background-images/menu.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button {
+    position: absolute;
+    display: flex;
+    width: 25%;
+    height: 7vh;
+    border-radius: 10px;
+    border: solid;
+    border-color: #FFFFFF;
+    border-width: 2px;
+    align-items: center;
+    justify-content: center;
+    left: 37.5%;
+}
+
+.button:hover {
+    cursor: pointer;
+}

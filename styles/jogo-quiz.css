@@ -1,0 +1,171 @@
+/* IMPORTS */
+@font-face {
+    font-family: "Lobster";
+    src: url("../assets/fonts/Lobster-Regular.woff") format("woff"),
+    url("../assets/fonts/Lobster-Regular.woff2") format(("woff2"));
+}
+
+/* GERAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: url("../assets/images/background-images/jogo-quiz.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lobster";
+    color: #FFFFFF;
+}
+
+/* CABEÇALHO */
+.menu-button {
+    position: absolute;
+    border: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    left: 3%;
+    top: 3%;
+    z-index: 1;
+    scale: 1.1;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.blur-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+
+    display: none;
+}
+
+.finished {
+    width: 100%;
+    min-height: inherit;
+    top: 25%;
+    position: absolute;
+    font-size: 5em;
+    text-align: center;
+    user-select: none;
+    text-decoration: none;    
+    z-index: 2;
+
+    display: none;
+}
+
+.back-to-menu {
+    margin-left: 20%;
+    width: 60%;
+    cursor: pointer;
+    border: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    scale: 0.5;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+}
+
+/* JOGO */
+.game-header {
+    display: flex;
+    font-size: 1.3em;
+    width: inherit;
+    justify-content: space-around;
+}
+
+.game-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.question {
+    font-size: 1.6em;
+    text-align: left;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.options {
+    display: grid;
+    left: 50%;
+    width: 100%;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 10px;
+    margin-top: 7%;
+    user-select: none;
+}
+
+.option {
+    border: solid;
+    border-width: 1px;
+    width: 80%;
+    margin-left: 10%;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+}
+
+.selected {
+    border-color: #1d7ef0;
+    background: radial-gradient(transparent, #82b7f5);
+}
+
+.go-next {
+    position: absolute;
+    margin-top: 3%;
+    padding: 10px;
+    border: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    width: 10%;
+    left: 45%;
+    background-color: transparent;
+
+    background: linear-gradient(to left, transparent 50%, #1d7ef0 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    user-select: none;
+}
+
+.go-next:hover {
+    background-position: left;
+    cursor: pointer;
+}
+
+.correct {
+    background: linear-gradient(145deg, transparent 60%, #7ff266 40%) right;
+    border-color: #51eb2f;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.wrong {
+    background: linear-gradient(145deg, transparent 60%, #eb5348 40%) right;
+    border-color: #f03426;
+    background-size: 200%;
+    transition: .5s ease-out;
+}

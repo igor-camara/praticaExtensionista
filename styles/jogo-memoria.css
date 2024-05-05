@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Lobster";
+    src: url("../assets/fonts/Lobster-Regular.woff") format("woff"),
+    url("../assets/fonts/Lobster-Regular.woff2") format(("woff2"));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: url("../assets/images/background-images/jogo-memoria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lobster";
+}
+
+img {
+    width: 85px;
+    height: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.blur-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+
+    display: none;
+}
+
+.victory {
+    width: 100%;
+    min-height: inherit;
+    top: 25%;
+    position: absolute;
+    font-size: 5em;
+    text-align: center;
+    user-select: none;
+    text-decoration: none;    
+    z-index: 2;
+
+    display: none;
+}
+
+.menu-button {
+    position: absolute;
+    border: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    left: 3%;
+    top: 3%;
+    z-index: 1;
+    scale: 1.1;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.back-to-menu {
+    margin-left: 20%;
+    width: 60%;
+    cursor: pointer;
+    border: solid;
+    border-radius: 10px;
+    border-width: 3px;
+    scale: 0.5;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    user-select: none;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.game-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 2em;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card {
+    background: radial-gradient(#ffffff, #a3c9ad);
+    position: relative;
+    width: 95px;
+    height: 95px;
+    border-radius: 15px;
+    border: solid;
+    border-width: 1px;
+    opacity: 1;
+    transition: border-color 500ms ease-in-out, opacity 1500ms ease-in-out;
+    user-select: none;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0);
+}
